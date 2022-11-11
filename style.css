@@ -1,0 +1,43 @@
+
+.card {
+	max-width: 25%;
+	border: solid #d6d4d4 1px;
+	margin: 0;
+	padding: 8px;
+
+	text-align: center;
+	font-family: sans-serif; /* TODO */
+}
+
+.card__image {
+	width: 100%;
+}
+
+.card__code {
+	text-align: left;
+	font-size: 12px;
+	color: gray;
+	font-weight: bold;
+}
+
+.card__code::before {
+	font-weight: normal;
+	content: "KÓD: ";
+}
+
+.card__name {
+	color: green;
+	text-decoration: none;
+}
+
+.card__name:hover {
+	text-decoration: underline;
+}
+
+.card__price {
+	font-weight: bolder;
+}
+
+.card__price::after {
+	content: " Kč";
+}
