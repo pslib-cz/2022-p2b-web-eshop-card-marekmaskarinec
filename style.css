@@ -60,6 +60,7 @@ main {
 	border-radius: 2px;
 	display: inline-flex;
 	align-items: center;
+	text-decoration: none;
 }
 
 .btn > * {
@@ -91,4 +92,19 @@ main {
 
 .card__avail .icon {
 	color: green;
+}
+
+.card__image-box {
+	position: relative;
+}
+
+.card__label {
+	background-color: rgb(255, 224, 130);
+	position: absolute;
+	right: 0;
+}
+
+.card__label > * {
+	margin: 5px;
+	text-align: right;
 }

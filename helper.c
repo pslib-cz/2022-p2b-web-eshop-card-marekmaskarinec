@@ -31,7 +31,8 @@ enum keys {
 	keys_desc,
 	keys_price,
 	keys_avail,
-	keys_max
+	keys_label,
+	keys_max,
 };
 
 int keyidx(char *key) {
@@ -47,6 +48,8 @@ int keyidx(char *key) {
 		return keys_price;
 	else if (strcmp(key, "avail") == 0)
 		return keys_avail;
+	else if (strcmp(key, "label") == 0)
+		return keys_label;
 
 	return -1;
 }
@@ -59,7 +62,7 @@ int main(int argc, char *argv[]) {
 	char *end = strstr(page, "</main>");
 
 	#define STR_SIZ 4096
-	char *vals[keys_max][STR_SIZ];
+	char *vals[keys_max][STR_SIZ] = {0};
 
 	char key[1024], value[STR_SIZ];
 	int r;
@@ -80,8 +83,8 @@ int main(int argc, char *argv[]) {
 
 	FILE *of = fopen("index.html", "w");
 		fprintf(of, "%.*s", end - page, page);
-		fprintf(of, card, vals[keys_img], vals[keys_code], vals[keys_name],
-			vals[keys_desc], vals[keys_price], vals[keys_avail]);
+		fprintf(of, card, vals[keys_label], vals[keys_img], vals[keys_code],
+			vals[keys_name], vals[keys_desc], vals[keys_price], vals[keys_avail]);
 		fprintf(of, "%s", end);
 	fclose(of);
 
