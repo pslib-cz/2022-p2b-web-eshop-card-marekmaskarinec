@@ -1,16 +1,30 @@
 
+main {
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .card {
-	max-width: 25%;
+	max-width: 256px;
 	border: solid #d6d4d4 1px;
-	margin: 0;
+	margin: -1px 0 0 -1px;
 	padding: 8px;
 
 	text-align: center;
 	font-family: sans-serif; /* TODO */
 }
 
+.card:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .card__image {
 	width: 100%;
+}
+
+.card__header {
+	height: 64px;
 }
 
 .card__code {
@@ -18,11 +32,6 @@
 	font-size: 12px;
 	color: gray;
 	font-weight: bold;
-}
-
-.card__code::before {
-	font-weight: normal;
-	content: "KÓD: ";
 }
 
 .card__name {
@@ -34,10 +43,52 @@
 	text-decoration: underline;
 }
 
+.card__desc {
+	height: 128px;
+	overflow: hidden;
+}
+
 .card__price {
 	font-weight: bolder;
 }
 
-.card__price::after {
-	content: " Kč";
+.btn {
+	background-color: red;
+	color: white;
+	padding: 8px;
+	border: 0px solid black;
+	border-radius: 2px;
+	display: inline-flex;
+	align-items: center;
+}
+
+.btn > * {
+	margin: 0;
+}
+
+.card__buy {
+	background-color: #d31353;
+	color: white;
+}
+
+.card__buy:hover {
+	background-color: #222;
+}
+
+.card__buy .icon {
+	padding-right: 8px;
+}
+
+.icon {
+	width: auto;
+	height: auto;
+}
+
+.card__avail {
+	display: inline-flex;
+	align-items: center;
+}
+
+.card__avail .icon {
+	color: green;
 }

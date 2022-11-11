@@ -1,12 +1,14 @@
 <div class="card">
 	<img class="card__image" src="%s" />
-	<p class="card__code">KÓD: %s</p>
-	<a class="card__name">%s</a>
+	<header class="card__header">
+		<p class="card__code">KÓD: %s</p>
+		<a class="card__name">%s</a>
+	</header>
 	<p class="card__stars">☆☆☆☆☆</p>
-	<p class="card__desc">%s</p>
-	<p class="card__price">%d Kč</p>
-	<div class="btn card__buy">
-		<p>Přidat do košíku</p>
+	<div class="card__desc">
+		<p>%s</p>
 	</div>
-	<p class="card__avail">Skladem %d kusů</p>
+	<p class="card__price">%s Kč</p>
+	<p class="btn card__buy"><span class="icon material-symbols-outlined">shopping_cart</span>Přidat do košíku</p>
+	<p class="card__avail"><span class="icon material-symbols-outlined">done</span> Skladem %s kusů</p>
 </div>

@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+echo CC helper.c
+cc -o helper helper.c
+
+cp template.html index.html
+for f in produkty/*.ini; do
+	echo BU $f
+	cat $f | ./helper
+done
